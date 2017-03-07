@@ -30,7 +30,7 @@ public class FlipKartTest {
    
     public void openBrowser(String browser,String pathForFirefoxDriver,String pathForChromeDriver) throws InterruptedException{
      
-	
+	//Opening application
 		   if(browser.equalsIgnoreCase("chrome")){
 		  System.setProperty("webdriver.chrome.driver",pathForChromeDriver);
 		  driver = new ChromeDriver();
