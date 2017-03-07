@@ -13,15 +13,9 @@ public class AddToCartObjectRepository {
 		  return element;
 		  
 	  }
-	  
+
 	  public static WebElement goToKart(WebDriver driver){		  
-		  element =  driver.findElement(By.className("_3NFO0d"));	
-		  return element;//*[@class='_3NFO0d']
-		  
-	  }
-	  
-	  public static WebElement searchItemInKart(WebDriver driver){		  
-		  element =  driver.findElement(By.xpath("//*[text()='SAMSUNG Galaxy On5 (Gold, 8 GB)']"));		  
+		  element =  driver.findElement(By.xpath("//a[@class='_3NFO0d']"));
 		  return element;
 		  
 	  }

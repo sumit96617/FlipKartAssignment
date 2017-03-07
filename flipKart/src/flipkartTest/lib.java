@@ -11,6 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,10 +30,15 @@ public class lib {
       LoginObjectRepository.txtbox_username(driver).sendKeys(Username);
       LoginObjectRepository.txtbox_password(driver).sendKeys(Password);
       LoginObjectRepository.button_Login(driver).click();
-      elementVisible = lib.waitCondtion(driver,LoginObjectRepository.link_MyAccount(driver));
+     // driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+      Thread.sleep(3000);
+      LoginObjectRepository.link_MyAccount(driver).click();
+    /*  elementVisible = lib.waitCondtion(driver,LoginObjectRepository.link_MyAccount(driver));
       elementVisible.click();
       elementVisible = lib.waitCondtion(driver,LoginObjectRepository.link_UpdateEmailMobile(driver));
-      elementVisible.click();
+      elementVisible.click();*/
+      Thread.sleep(4000);
+      LoginObjectRepository.link_UpdateEmailMobile(driver).click();
       String emailId = LoginObjectRepository.span_Email(driver).getText();
       String mobileNumber= LoginObjectRepository.span_Mobile(driver).getText();
       if(Username.equalsIgnoreCase(emailId) || Username.equalsIgnoreCase(mobileNumber)){
@@ -70,11 +76,13 @@ public class lib {
 		 List<WebElement> price = ItemSearchObjectRepository.totalPriceOfItems(driver);
 		 int indexForMaxPrice=searchMaxpriceIndex(price, numberOfItemsToAddToCart, element, itemToSearch);
 		 element.get(indexForMaxPrice).click();
-		 Thread.sleep(2000);
-		 String addToCart = AddToCartObjectRepository.addToKart(driver).getText();
+		 elementVisible = lib.waitCondtion(driver,AddToCartObjectRepository.addToKart(driver));
+	     //elementVisible.click();
+		 String addToCart =elementVisible.getText();
 		 if("ADD TO CART".equalsIgnoreCase(addToCart)){
-		     AddToCartObjectRepository.addToKart(driver).click();
+			 elementVisible.click();
 	     	}
+		 Thread.sleep(2000);
 		 AddToCartObjectRepository.goToKart(driver).click();
 	 }
 	 
@@ -94,12 +102,12 @@ public class lib {
     		 break;
     	   }
     	 }
-
+    	
     	 for(int j=indexOfMaxPrice+1;j<numberOfItemsToAddToCart;j++){
     		 String textOfPrice = price.get(j).getText();
         	 int priceOfItem =Integer.parseInt(textOfPrice.substring(1,textOfPrice.length()).replace(",",""));
     		 String textofItemForPriceCheck = element.get(j).getText();
-    		 if(textofItemForPriceCheck.toLowerCase().indexOf(itemToSearch.toLowerCase())!=-1 && textofItemForPriceCheck.indexOf("Out Of Stock")==-1 && priceOfItem> maxPrice){
+     		 if(textofItemForPriceCheck.toLowerCase().indexOf(itemToSearch.toLowerCase())!=-1 && textofItemForPriceCheck.indexOf("OUT OF STOCK")==-1 && priceOfItem> maxPrice){
     			 maxPrice=priceOfItem;
     			 indexOfMaxPrice=j;
     		}
@@ -138,9 +146,11 @@ public class lib {
     	return elementVisible;
     }
     
-    public static void logout(WebDriver driver){
-    	elementVisible = lib.waitCondtion(driver,logoutObjectRepository.butn_Logout(driver));
-        elementVisible.click();
-    	
-    }
- }
+    public static void logout(WebDriver driver) throws Exception{
+    	LoginObjectRepository.div_HomeScreen(driver).click();
+    	Thread.sleep(3000);
+    	logoutObjectRepository.butn_Logout(driver).click();
+    	Thread.sleep(8000);
+        
+     }
+}

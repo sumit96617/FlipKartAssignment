@@ -9,7 +9,6 @@ public class LoginObjectRepository {
 private static WebElement element = null;
 
   public static WebElement link_Login(WebDriver driver){	  
-	System.out.println("LoginObjectRepository.link_Login()");
 	element =  driver.findElement(By.xpath("//*[text()='Log In']"));  
 	return element;
 	  	  
@@ -52,7 +51,7 @@ private static WebElement element = null;
 	  }
   
   public static WebElement div_HomeScreen(WebDriver driver){
-	element = driver.findElement(By.xpath("//div[@class='unit size1of8 ']"));
+	element = driver.findElement(By.xpath("//a[@href='/']"));
 	return element;
 	 }
 }

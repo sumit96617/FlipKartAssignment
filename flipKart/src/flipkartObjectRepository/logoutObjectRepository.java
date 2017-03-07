@@ -9,7 +9,7 @@ public class logoutObjectRepository {
 	
 	
 	public static WebElement butn_Logout(WebDriver driver){
-		element=driver.findElement(By.xpath("//*[@class='_2k0gmP']"));
-		return element;
+		 element=driver.findElement(By.xpath("//*[@class='_2f5Jjv'][10]"));
+	  	 return element;
 	}
 }

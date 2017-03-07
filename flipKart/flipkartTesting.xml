@@ -1,24 +1,25 @@
 <suite name="FlipkartTestSuite" parallel="tests">
 <test name = "FlipKartFirefoxTest">
-<parameter name="browser" value="firefox" />
+<parameter name="browser" value="chrome" />
 <parameter name="pathForFirefoxDriver" value="C:\\Users\\sumit\\Selenium\\geckodriver-v0.14.0-win64\\geckodriver.exe"/>
-<parameter name="pathForChromeDriver" value="C:\\Users\\sumit\\Selenium\\chromedriver_win32\\chromedriver.exe"/>1
-<parameter name="Username" value="username"/>
-<parameter name="Password" value="password"/>
+<parameter name="pathForChromeDriver" value="C:\\Users\\sumit\\Selenium\\chromedriver_win32\\chromedriver.exe"/>
+<parameter name="Username" value="7899076837"/>
+<parameter name="Password" value="sulekha12#"/>
 <parameter name="nameOfScreenshotForCartItems" value="cartScreenShot.png"/>
 <parameter name="nameForScreenShotOfCompareItems" value="compareItemScreenShot.png"/>
 <parameter name="itemToSearch" value="iPhone 7"/>
 <parameter name="totalNumberOfItemsToAdd" value="25"/>
 <classes>
+<class name ="flipkartTest.FlipKartCompareItemTest"/>
 <class name ="flipkartTest.FlipKartTest"/>
 </classes>
 </test>
 <test name = "FlipKartChromeTest">
-<parameter name="browser" value="chrome"/>
+<parameter name="browser" value="firefox"/>
 <parameter name="pathForFirefoxDriver" value="C:\\Users\\sumit\\Selenium\\geckodriver-v0.14.0-win64\\geckodriver.exe"/>
 <parameter name="pathForChromeDriver" value="C:\\Users\\sumit\\Selenium\\chromedriver_win32\\chromedriver.exe"/>
-<parameter name="Username" value="username"/>
-<parameter name="Password" value="password"/>
+<parameter name="Username" value="7899076837"/>
+<parameter name="Password" value="sulekha12#"/>
 <parameter name="nameOfScreenshotForCartItems" value="cartScreenShot.png"/>
 <parameter name="nameForScreenShotOfCompareItems" value="compareItemScreenShot.png"/>
 <parameter name="numOfItemsToComapare" value="3"/>
@@ -26,7 +27,7 @@
 <parameter name="totalNumberOfItemsToAdd" value="25"/>
 <classes>
 <class name ="flipkartTest.FlipKartTest"/>
-<class name ="flipkartTest.FlipKartCompareItemTest"/>
+<class name ="flipkartTest.FlipKartTest"/>
 </classes>
 </test>
 </suite>

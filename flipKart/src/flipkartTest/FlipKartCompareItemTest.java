@@ -77,8 +77,15 @@ public class FlipKartCompareItemTest {
 		 
 	     @Test (priority = 3)
 	     
-	     public void logout(){
+	     public void logout() throws Exception{
 	    	lib.logout(driver); 
 	    	 
+	     }
+	     
+	     @Test (priority = 4)
+	     
+	     public void closeBrowser(){
+	    	 
+	    	 driver.quit();
 	     }
 }

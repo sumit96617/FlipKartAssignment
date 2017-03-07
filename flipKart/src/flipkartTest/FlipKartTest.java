@@ -83,12 +83,12 @@ public class FlipKartTest {
        lib.takeScreenshot(driver, browser,nameOfScreenshotForCartItems);
        WebElement element =lib.waitCondtion(driver, AddToCartObjectRepository.removeRecentAddedItemFromKart(driver));
 	   element.click();
-       Thread.sleep(4000);
+	   Thread.sleep(3000);
      }
      
      @Test (priority = 3)
      
-     public void logout(){
+     public void logout() throws Exception{
     	lib.logout(driver); 
     	 
      }
