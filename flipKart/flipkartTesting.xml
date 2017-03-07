@@ -3,8 +3,8 @@
 <parameter name="browser" value="chrome" />
 <parameter name="pathForFirefoxDriver" value="C:\\Users\\sumit\\Selenium\\geckodriver-v0.14.0-win64\\geckodriver.exe"/>
 <parameter name="pathForChromeDriver" value="C:\\Users\\sumit\\Selenium\\chromedriver_win32\\chromedriver.exe"/>
-<parameter name="Username" value="7899076837"/>
-<parameter name="Password" value="sulekha12#"/>
+<parameter name="Username" value=""/>
+<parameter name="Password" value=""/>
 <parameter name="nameOfScreenshotForCartItems" value="cartScreenShot.png"/>
 <parameter name="nameForScreenShotOfCompareItems" value="compareItemScreenShot.png"/>
 <parameter name="itemToSearch" value="iPhone 7"/>
@@ -18,8 +18,8 @@
 <parameter name="browser" value="firefox"/>
 <parameter name="pathForFirefoxDriver" value="C:\\Users\\sumit\\Selenium\\geckodriver-v0.14.0-win64\\geckodriver.exe"/>
 <parameter name="pathForChromeDriver" value="C:\\Users\\sumit\\Selenium\\chromedriver_win32\\chromedriver.exe"/>
-<parameter name="Username" value="7899076837"/>
-<parameter name="Password" value="sulekha12#"/>
+<parameter name="Username" value=""/>
+<parameter name="Password" value=""/>
 <parameter name="nameOfScreenshotForCartItems" value="cartScreenShot.png"/>
 <parameter name="nameForScreenShotOfCompareItems" value="compareItemScreenShot.png"/>
 <parameter name="numOfItemsToComapare" value="3"/>
